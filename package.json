@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/j-chany/nba_discordbot.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "James Chan",
   "license": "ISC",
