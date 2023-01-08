@@ -1,0 +1,27 @@
+{
+  "name": "nba_discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-chany/nba_discordbot.git"
+  },
+  "keywords": [],
+  "author": "James Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-chany/nba_discordbot/issues"
+  },
+  "homepage": "https://github.com/j-chany/nba_discordbot#readme",
+  "devDependencies": {
+    "@discordjs/rest": "^1.5.0",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.26",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3"
+  }
+}
