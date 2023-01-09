@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import { Client, GatewayIntentBits } from "discord.js";
 dotenv.config();
-import { getPlayer } from "./functions/index.js";
+import { getPlayer, getLiveGames } from "./functions/index.js";
 const { token } = process.env;
 
 const prefix = "/";
@@ -29,6 +29,19 @@ client.on("messageCreate", (msg) => {
   }
   if (cmd === "hi" || cmd === "hey") {
     msg.channel.send(getPlayer(msg));
+  }
+  if (cmd === "live") {
+    const getGames = async () => {
+      const data = await getLiveGames();
+      console.log(data);
+      for (const game in data) {
+        msg.channel.send(
+          `${game}  Score: ${data[game].score} Current Quarter: ${data[game].currentP}`
+        );
+      }
+    };
+    const result = getGames();
+    console.log("RESULT: ", result);
   }
 });
 //make sure this line is the last line

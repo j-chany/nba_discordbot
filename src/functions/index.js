@@ -1,3 +1,3 @@
 import getPlayer from "./getPlayer.js";
-
-export { getPlayer };
+import getLiveGames from "./getLiveGames.js";
+export { getPlayer, getLiveGames };
