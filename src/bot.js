@@ -24,12 +24,15 @@ client.on("messageCreate", (msg) => {
 
   const cmd = msg.content.slice(1);
 
+  // test if bot is online
   if (cmd === "test") {
     msg.channel.send("BOT IS WORKING!");
   }
+  // greet the server 
   if (cmd === "hi" || cmd === "hey") {
     msg.channel.send(getPlayer(msg));
   }
+  // get live score for current live games
   if (cmd === "live") {
     const getGames = async () => {
       const data = await getLiveGames();
@@ -43,6 +46,8 @@ client.on("messageCreate", (msg) => {
     const result = getGames();
     console.log("RESULT: ", result);
   }
+
+
 });
 //make sure this line is the last line
 client.login(token);
